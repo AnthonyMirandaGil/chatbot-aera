@@ -9,6 +9,8 @@ pipeline:
     epochs: 200
   - name: ResponseSelector
   - name: EntitySynonymMapper
+  - name: FallbackClassifier
+    threshold: 0.6
 policies:
   - name: MemoizationPolicy
   - name: TEDPolicy

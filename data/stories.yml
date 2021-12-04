@@ -156,10 +156,28 @@ stories:
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
       - action: utter_despedida
+  - story: CM_00009
+    steps:
+      - intent: saludo_y_consulta_problemas_matricula_proceso_culminado
+      - action: utter_saludo_informar_pasa_a_matricula_rezagada
+      - intent: consulta_matricula_rezagada_pago_procedimiento
+      - action: utter_informar_matricula_rezagado_procedimiento
+      - intent: agradecimiento
+      - action: utter_agradecimiento_y_requerir_mas
+      - intent: denegar_mas_ayuda
+      - action: utter_despedida
   - story: CM_00013F1
     steps:
       - intent: saludo_y_consulta_problemas_matricula
       - action: utter_saludo_informar_formulario_problemas_matricula
+      - intent: agradecimiento
+      - action: utter_agradecimiento_y_requerir_mas
+      - intent: denegar_mas_ayuda
+      - action: utter_despedida
+  - story: CG_00012
+    steps:
+      - intent: consulta_problemas_matricula
+      - action: utter_informar_formulario_problemas_matricula
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
@@ -183,7 +201,7 @@ stories:
   - story: CG_00015F1
     steps:
       - intent: consulta_matricula_pago_autoseguro_fuera_fecha
-      - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
+      - action: utter_informar_matricula_pago_autoseguro_fuera_fecha
       - intent: consulta_matricula_rezagada_pago_procedimiento
       - action: utter_informar_matricula_rezagado_pago_procedimiento
       - intent: agradecimiento
@@ -193,9 +211,17 @@ stories:
   - story: CG_00015F2
     steps:
       - intent: saludo_y_consulta_matricula_rezagado_pago_procedimiento
-      - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
+      - action: utter_saludo_informar_matricula_rezagado_procedimiento
       - intent: consulta_matricula_rezagado_procedimiento_incompletos
       - action: utter_informar_matricula_rezagado_procedimiento_posterior_pago
+      - intent: agradecimiento
+      - action: utter_agradecimiento_y_requerir_mas
+      - intent: denegar_mas_ayuda
+      - action: utter_despedida
+  - story: CG_00022
+    steps:
+      - intent: saludo_y_consulta_problemas_matricula_no_habilitada
+      - action: utter_informar_verificacion_requsistos_matricula_y_formulario
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
@@ -235,7 +261,7 @@ stories:
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: consulta_matricula_pago_autoseguro_fuera_fecha
-      - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
+      - action: utter_informar_matricula_pago_autoseguro_fuera_fecha
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
@@ -275,7 +301,7 @@ stories:
       - intent: saludo_y_consulta_matricula_pago_autoseguro_fuera_fecha
       - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
       - intent: consulta_matricula_pago_autoseguro_fuera_fecha
-      - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
+      - action: utter_informar_matricula_pago_autoseguro_fuera_fecha
       - intent: confirmacion
       - action: utter_requerir_mas
       - intent: consulta_pago_autoseguro
@@ -325,7 +351,7 @@ stories:
   - story: CG_00032
     steps:
       - intent: saludo_y_consulta_matricula_rezagada_procedimiento
-      - action: utter_saludo_informar_matricula_pago_autoseguro_fuera_fecha
+      - action: utter_saludo_informar_matricula_rezagado_procedimiento
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
@@ -435,7 +461,7 @@ stories:
       - intent: confirmar_requerir_mas_ayuda
       - action: utter_requerir_consulta
       - intent: consulta_matricula_rezagada_procedimiento
-      - action: utter_informar_matricula_rezagada
+      - action: utter_informar_matricula_rezagado_procedimiento
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
@@ -726,6 +752,16 @@ stories:
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda
       - action: utter_despedida
+  - story: CP_00003
+    steps:
+      - intent: consulta_reincorporacion_procedimiento
+      - action: utter_informar_reincorporacion_procedimiento
+      - intent: consulta_reincorporacion_rezagada_procedimiento
+      - action: utter_informar_reincorporacion_rezagada_procedimiento
+      - intent: agradecimiento
+      - action: utter_agradecimiento_y_requerir_mas
+      - intent: denegar_mas_ayuda
+      - action: utter_despedida
   - story: CP_00002F2
     steps:
       - intent: saludo_y_consulta_constancia_notas_procedimiento
@@ -754,6 +790,14 @@ stories:
       - action: utter_saludo_informar_constancia_notas_procedimiento
       - intent: consulta_formato_solicitud_constancia_estudios
       - action: utter_informar_formato_solicitud_constancia_estudios
+      - intent: agradecimiento
+      - action: utter_agradecimiento_y_requerir_mas
+      - intent: denegar_mas_ayuda
+      - action: utter_despedida
+  - story: CP_00020
+    steps:
+      - intent: saludo_y_consulta_estado_tramites_reincorporación
+      - action: utter_informar_estado_tramites_reincorporación
       - intent: agradecimiento
       - action: utter_agradecimiento_y_requerir_mas
       - intent: denegar_mas_ayuda

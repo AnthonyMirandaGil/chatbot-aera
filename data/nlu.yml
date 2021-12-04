@@ -1257,3 +1257,10 @@ nlu:
       - Buen día, no tuve tiempo para recoger mi carnet en la fecha que indicaron. Quisiera saber si habrá nueva fecha de entrega.
       - Hola, mi fecha de entrega de carnet ya paso puedo ir a recorgelo todavia ?
       - Buenas dias, no pude ir a recoger el carget en la fecha programada podria ir a recogerlo ??
+  - intent: out_of_scope
+    examples: |
+      - Que horas es ?
+      - que carreras hay en la uni
+      - cuantos es 2 mas 2
+      - Quien es el presidente
+      - que dia es hoy
